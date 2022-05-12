@@ -53,7 +53,10 @@ public:
 	UAnimSequence* FireAnimation;
 
 	UPROPERTY(Replicated, BlueprintReadOnly, Category = "Gameplay")//Replicated：复制到客户端，让其也嫩能判断是否携带通关物
-	bool bIsCarryingObjective;
+	bool bIsCarryingObjective;//是否有通关道具
+
+	UPROPERTY(Replicated, BlueprintReadOnly, Category = "Gameplay")//暴露给蓝图
+	int CarryingObjectiveNum = 0;
 
 protected:
 	

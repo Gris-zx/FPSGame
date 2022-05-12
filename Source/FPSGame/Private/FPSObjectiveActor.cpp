@@ -53,7 +53,10 @@ void AFPSObjectiveActor::NotifyActorBeginOverlap(AActor* OtherActor)
 		AFPSCharacter* MyCharacter = Cast<AFPSCharacter>(OtherActor);
 		if (MyCharacter)
 		{
-			MyCharacter->bIsCarryingObjective = true;
+			MyCharacter->bIsCarryingObjective = true;//已有通关道具（不管有几个）
+
+			MyCharacter->CarryingObjectiveNum++;//已有通关道具个数
+			
 
 			Destroy();
 		}

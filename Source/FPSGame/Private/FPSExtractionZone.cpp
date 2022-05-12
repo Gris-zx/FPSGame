@@ -37,12 +37,12 @@ void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent,
 		return;
 	}
 
-	if (MyPawn->bIsCarryingObjective)
+	if (MyPawn->CarryingObjectiveNum == 4)
 	{
 		AFPSGameMode* GM = Cast<AFPSGameMode>(GetWorld()->GetAuthGameMode());
 		if (GM)//只会在服务器调用
 		{
-			//GM->CompleteMission(MyPawn, true);
+			GM->CompleteMission(MyPawn, true);
 			OnMissionCompleted(MyPawn, true);
 
 		}

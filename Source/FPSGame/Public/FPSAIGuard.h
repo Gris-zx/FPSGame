@@ -47,7 +47,7 @@ protected:
 
 	FTimerHandle TimerHandle_ResetOrientation;//设置过一段时间就还原到初始位置
 
-	UPROPERTY(ReplicatedUsing=OnRep_GuardState)//让服务器和客户端保持同步
+	UPROPERTY(ReplicatedUsing=OnRep_GuardState, BlueprintReadOnly, Category = "Gameplay")//让服务器和客户端保持同步
 	EAIState GuardState;//敌人守卫状态
 
 	UFUNCTION()
