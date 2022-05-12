@@ -1,3 +1,9 @@
+本项目以Unreal游戏引擎为核心，结合vs c++编程，网络同步技术，设计了第一人称联网闯关游戏，能实现许多常
+见的游戏机制，如武器、强化道具、角色、守卫等功能
+
+
+
+
 # SimpleFPSTemplate
 Simple C++ FPS Template for Unreal Engine 4
 
